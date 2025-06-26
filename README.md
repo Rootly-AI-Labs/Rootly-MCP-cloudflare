@@ -73,7 +73,7 @@ The server provides 25+ tools covering:
 
 1. **Clone and setup**:
    ```bash
-   git clone <your-repo>
+   git clone https://github.com/Rootly-AI-Labs/Rootly-MCP-cloudflare
    cd Rootly-mcp-cloudflare
    npm install
    ```
