@@ -1,15 +1,8 @@
 # Rootly MCP Server for Cloudflare Workers
 
-A remote MCP (Model Context Protocol) server that provides AI agents access to the Rootly API for incident management. Users provide their own Rootly API tokens for secure access to their organization's incidents.
+A remote MCP (Model Context Protocol) server written in TypeScript that provides AI agents access to the Rootly API for incident management. Users provide their own Rootly API tokens for secure access to their organization's incidents.
 
-## Features
-
-- **User-provided API tokens**: Each user connects with their own Rootly API token via Authorization headers
-- **Remote hosting**: Deployed on Cloudflare Workers for global accessibility
-- **25+ API endpoints**: Access to incidents, alerts, teams, services, workflows, and more
-- **Cursor IDE integration**: Simple configuration with mcp-remote
-- **Server-Sent Events**: SSE transport for MCP protocol
-- **CORS support**: Cross-origin requests for web-based MCP clients
+![Cursor IDE Integration Demo](cloudflare-mcp-demo.gif)
 
 ## Deployment
 
@@ -17,6 +10,9 @@ A remote MCP (Model Context Protocol) server that provides AI agents access to t
 
 1. [Node.js](https://nodejs.org/) (v18 or later)
 2. [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
+   ```bash
+   npm install -g wrangler
+   ```
 3. Cloudflare account
 
 ### Quick Start
