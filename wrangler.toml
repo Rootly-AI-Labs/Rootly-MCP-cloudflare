@@ -1,0 +1,13 @@
+name = "incidents"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+# No default token - users provide their own via Authorization header
+# [vars]
+# ROOTLY_API_TOKEN = ""
+
+[observability]
+enabled = true
+
