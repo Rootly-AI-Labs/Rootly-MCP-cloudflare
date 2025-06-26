@@ -58,41 +58,21 @@ The server provides 25+ tools covering:
 3. Create a new token with appropriate permissions
 4. Copy the token for use with the MCP server
 
-## Deployment
+## Contributing
 
-### Prerequisites
+### Adding New API Endpoints
 
-1. [Node.js](https://nodejs.org/) (v18 or later)
-2. [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
-   ```bash
-   npm install -g wrangler
-   ```
-3. Cloudflare account
+To add new Rootly API endpoints to the MCP server:
 
-### Quick Start
+1. Fork the repository and create a feature branch
+2. Edit the `apiMap` object in `src/index.ts` to add your new endpoints
+3. Reference the [Rootly API documentation](https://docs.rootly.com/api-reference) for available endpoints and parameters
+4. Test locally with `npm run dev`
+5. Submit a pull request with your changes, or reach out to spencer.cheng@rootly.com to be added to the Cloudflare account
 
-1. **Clone and setup**:
-   ```bash
-   git clone https://github.com/Rootly-AI-Labs/Rootly-MCP-cloudflare
-   cd Rootly-mcp-cloudflare
-   npm install
-   ```
+### Configuration
 
-2. **Deploy to Cloudflare**:
-   ```bash
-   npm run deploy
-   ```
-
-3. **Get your MCP server URL**:
-   After deployment, you'll get a URL like:
-   ```
-   https://incidents.rootly-mcp-server.workers.dev/sse
-   ```
-
-
-## Configuration
-
-To modify which Rootly API endpoints are available, edit the `apiMap` object in `src/index.ts`.
+The server configuration is managed through the `apiMap` object in `src/index.ts`, which maps MCP tool names to Rootly API endpoints.
 
 ## Logs
 
