@@ -4,37 +4,6 @@ A remote MCP (Model Context Protocol) server written in TypeScript that provides
 
 ![Cursor IDE Integration Demo](cloudflare-mcp-demo.gif)
 
-## Deployment
-
-### Prerequisites
-
-1. [Node.js](https://nodejs.org/) (v18 or later)
-2. [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
-   ```bash
-   npm install -g wrangler
-   ```
-3. Cloudflare account
-
-### Quick Start
-
-1. **Clone and setup**:
-   ```bash
-   git clone <your-repo>
-   cd Rootly-mcp-cloudflare
-   npm install
-   ```
-
-2. **Deploy to Cloudflare**:
-   ```bash
-   npm run deploy
-   ```
-
-3. **Get your MCP server URL**:
-   After deployment, you'll get a URL like:
-   ```
-   https://incidents.rootly-mcp-server.workers.dev/sse
-   ```
-
 ## Usage
 
 ### Cursor IDE Configuration
@@ -89,13 +58,37 @@ The server provides 25+ tools covering:
 3. Create a new token with appropriate permissions
 4. Copy the token for use with the MCP server
 
-### Local Development
+## Deployment
 
-```bash
-npm run dev
-```
+### Prerequisites
 
-Server will be available at `http://localhost:8787/sse`
+1. [Node.js](https://nodejs.org/) (v18 or later)
+2. [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-and-update/)
+   ```bash
+   npm install -g wrangler
+   ```
+3. Cloudflare account
+
+### Quick Start
+
+1. **Clone and setup**:
+   ```bash
+   git clone <your-repo>
+   cd Rootly-mcp-cloudflare
+   npm install
+   ```
+
+2. **Deploy to Cloudflare**:
+   ```bash
+   npm run deploy
+   ```
+
+3. **Get your MCP server URL**:
+   After deployment, you'll get a URL like:
+   ```
+   https://incidents.rootly-mcp-server.workers.dev/sse
+   ```
+
 
 ## Configuration
 
