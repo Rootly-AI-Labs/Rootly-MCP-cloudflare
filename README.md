@@ -35,14 +35,6 @@ A remote MCP (Model Context Protocol) server written in TypeScript that provides
    https://incidents.rootly-mcp-server.workers.dev/sse
    ```
 
-### Local Development
-
-```bash
-npm run dev
-```
-
-Server will be available at `http://localhost:8787/sse`
-
 ## Usage
 
 ### Cursor IDE Configuration
@@ -97,34 +89,18 @@ The server provides 25+ tools covering:
 3. Create a new token with appropriate permissions
 4. Copy the token for use with the MCP server
 
-## Security
+### Local Development
 
-- API tokens are passed via Authorization headers and not stored
-- All communication uses HTTPS
-- Follows Rootly's API rate limits
-- Only predefined API endpoints are accessible via the tool mapping
+```bash
+npm run dev
+```
+
+Server will be available at `http://localhost:8787/sse`
 
 ## Configuration
 
 To modify which Rootly API endpoints are available, edit the `apiMap` object in `src/index.ts`.
 
-## Troubleshooting
-
-### Common Issues
-
-1. **Authentication errors**: Verify your Rootly API token is valid and has proper permissions
-2. **Connection issues**: Ensure you're using the correct server URL with `/sse` endpoint
-3. **Missing tools**: Check that your MCP client successfully connects and loads the tool list
-
-### Logs
+## Logs
 
 Check Cloudflare Workers logs in your Cloudflare dashboard for debugging information.
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test locally with `npm run dev`
-5. Deploy to staging with `npm run deploy`
-6. Submit a pull request
